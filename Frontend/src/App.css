@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-black text-white;
+}
+
+@keyframes move {
+  0% { background-position: 0 0; }
+  100% { background-position: -400px -400px; }
+}
+
+.animate-move {
+  animation: move 25s linear infinite;
+}
+
+.bg-pattern {
+  @apply fixed top-0 left-0 w-full h-full -z-10;
+  background: radial-gradient(circle, rgba(80, 80, 80, 0.5) 15%, transparent 16%);
+  background-size: 60px 60px;
+  animation: move 25s linear infinite;
+}
